@@ -17,62 +17,55 @@ export default function App() {
   // creiamo una variabile di stato che conterrà il nostro array di oggetti con i film ricercati
   const [film, setFilm] = useState([])
 
+  const [search, setSearch] = useState("")
 
-  function fetchFilm() {
+  // Creiamo una funzione unica per gestire l'evento onChange dei nostri campi.
+  function handleSearchData(event) {
+    // all'avvio della funzione richiama currentForm Data
+    setSearch(event.target.value)
+  }
 
-    axios.get(`${endpointFilm}query=harry`)
+  // creiamo una funzione per richiedere i dati dall'api una volta inviata la ricerca
+  function handleSubmitForm(e) {
+    e.preventDefault()
+    console.log("Sto inviando la richiesta per:", search);
+    axios.get(`${endpointFilm}query=${search}`)
       .then(res =>
         // console.log(res.data.results),
         // inseriamo la risposta all'interno di film tramite setFilm
-        setFilm(res.data.results),
+        setFilm(res.data.results)
       )
       .catch((error) => {
         console.error("Errore durante il recupero dei dati:", error);
       });
 
-    // Creiamo una funzione unica per gestire l'evento onChange dei nostri campi.
-    function handleSearchData(event) {
-      // gestiamo il valore se è preso da checkbox (true|false) oppure da text (stringhe)
-      const value = event.target.value;
-
-      // all'avvio della funzione richiama currentForm Data
-      setFormData((currentformData) => ({
-        // prendi tutto l'array 
-        ...currentformData,
-        // aggiungi porpietà:valore
-        [event.target.name]: value
-      }));
-    }
+    setSearch("")
 
   }
 
 
-
-  // per il momento inviamo la richiesta allo start pagina
-  // successivamente all'invio del form
-  useEffect(fetchFilm, []);
-  console.log(film)
 
 
   return (
     <>
 
       {/* generiamo il form */}
-      <form class="d-flex" role="search">
+      <form
+        onSubmit={handleSubmitForm}
+        className="d-flex"
+        role="search">
         {/* input di ricerca */}
         <input
-          class="form-control me-2"
+          className="form-control me-2"
           type="search"
-          value={ }
+          value={search}
           onChange={handleSearchData}
           placeholder="Search"
           aria-label="Search"
-
-
         />
 
         {/* pulsante di invio del form */}
-        <button class="btn btn-outline-success" type="submit">
+        <button className="btn btn-outline-success" type="submit">
           Search
         </button>
       </form>
