@@ -1,28 +1,20 @@
-import { useContext } from "react"
-import MediaContext from "../contexts/MediaContext"
+import { useContext } from "react";
+import MediaContext from "../contexts/MediaContext";
+
+import MediaCard from "./MediaCard";
 
 export default function MediaGallery() {
-    const { film } = useContext(MediaContext)
+    const { film } = useContext(MediaContext);
+
     return (
+        <section className="content-box">
+            <div className="container">
+                <div className="box-bk-card">
+                    {film.map(film => (<MediaCard key={film.id} film={film} />
 
-        <>
-            {
-                film.map(film => (
-                    <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-2 bk-card">
-                        <div>
-                            {/* Titolo */}
-                            <h2>{film.title}</h2>
-                            {/* Titolo Originale */}
-                            <h2>{film.original_title}</h2>
-                            {/* Lingua */}
-                            <p>{film.original_language}</p>
-                            {/* Voto */}
-                            <p>{film.vote_average}</p>
-                        </div>
-                    </div>
-                ))
-            }
-        </>
-
-    )
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 }
