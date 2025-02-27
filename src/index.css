@@ -28,11 +28,10 @@ header .btn {
 
 /* MEDIA GALLERY*/
 
-/* Banner Nero */
 .content-box {
     color: white;
     font-family: "Open Sans";
-    text-align: left;
+    text-align: center;
     padding: 20px 0;
 }
 
@@ -41,21 +40,21 @@ header .btn {
 }
 
 /* Card */
-.box-bk-card {
+.box-card {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.bk-card {
+.media-card {
     margin: 5px;
     position: relative;
     /* debug */
     /* border: 1px solid green; */
 }
 
-.bk-card-box-image {
+.card-box-image {
     width: 100%;
     min-height: 200px;
     position: relative;
@@ -63,7 +62,7 @@ header .btn {
     transition: 1s;
 }
 
-.bk-card-image {
+.card-image {
     /* width: 100%; */
     position: absolute;
     top: 0px;
@@ -71,7 +70,7 @@ header .btn {
 
 }
 
-.bk-card-retro {
+.card-retro {
     position: absolute;
     opacity: 1;
     height: 100%;
@@ -79,17 +78,17 @@ header .btn {
     background-color: black;
 }
 
-.bk-card-retro p {
+.card-retro p {
     text-align: center;
 }
 
 
-.bk-card-box-image:hover {
+.card-box-image:hover {
     transform: rotateY(180deg);
     transition: transform 2s;
 }
 
-.bk-card-box-image:hover .bk-card-retro {
+.card-box-image:hover .card-retro {
     display: block;
     opacity: 1;
     transform: rotateY(180deg);
@@ -97,10 +96,7 @@ header .btn {
 
 }
 
-
-
-
-.bk-card-text {
+.card-text {
     text-align: center;
     font-family: "Open Sans";
     color: white;
@@ -110,6 +106,12 @@ header .btn {
     /* debug */
     /* border: 1px solid white; */
 }
+
+.flag-icon {
+    width: 100%;
+}
+
+
 
 
 /* FOOTER */

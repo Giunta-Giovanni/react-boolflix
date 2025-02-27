@@ -9,7 +9,7 @@ export default function MediaGallery() {
     return (
         <section className="content-box">
             <div className="container">
-                <div className="box-bk-card">
+                <div className="box-card">
                     {film.map(film => (<MediaCard key={film.id} film={film} />
 
                     ))}

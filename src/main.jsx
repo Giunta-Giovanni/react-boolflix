@@ -11,6 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import 'typeface-bebas-neue';
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
