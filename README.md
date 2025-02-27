@@ -5,21 +5,21 @@
 - Axios → Libreria JavaScript per effettuare richieste HTTP (alternativa a fetch).
 - React Router DOM → Libreria per la gestione della navigazione in applicazioni React (routing lato client).
 
-<!-- Milestone 0: -->
+<!-- Milestone 0: --> √
 Progettare la struttura del global state sulla linea degli esercizi svolti nei giorni precedenti.
 
-<!-- Milestone 1: -->
+<!-- Milestone 1: --> √
 Creare un layout base con una searchbar (una input e un button) in cui possiamo scrivere completamente o parzialmente il nome di un film. Possiamo, cliccando il  bottone, cercare sull’API tutti i film che contengono ciò che ha scritto l’utente.
-Vogliamo dopo la risposta dell’API visualizzare a schermo i seguenti valori per ogni film trovato: 
-Titolo
-Titolo Originale
-Lingua
-Voto
+Vogliamo dopo la risposta dell’API visualizzare a schermo i seguenti valori per ogni film trovato: √
+Titolo √
+Titolo Originale √
+Lingua √
+Voto √
 
 <!-- Step -->
 1. creare file media context e importarlo in app.js√
 2. generare chiamata api per vederne il funzionamento e il ricavo di tutti i dati.√
-3. gestire le rotte
+3. gestire le rotte √
 4. inviare dati a media gallery 
 5. gestire output 
 
