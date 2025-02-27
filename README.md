@@ -20,8 +20,8 @@ Voto √
 1. creare file media context e importarlo in app.js√
 2. generare chiamata api per vederne il funzionamento e il ricavo di tutti i dati.√
 3. gestire le rotte √
-4. inviare dati a media gallery 
-5. gestire output 
+4. inviare dati a media gallery √
+5. gestire output √
 
 
 <!-- Milestone 2: -->
