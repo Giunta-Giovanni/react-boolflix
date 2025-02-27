@@ -16,6 +16,14 @@ Titolo Originale
 Lingua
 Voto
 
+<!-- Step -->
+1. creare file media context e importarlo in app.js√
+2. generare chiamata api per vederne il funzionamento e il ricavo di tutti i dati.√
+3. gestire le rotte
+4. inviare dati a media gallery 
+5. gestire output 
+
+
 <!-- Milestone 2: -->
 Trasformiamo la stringa statica della lingua in una vera e propria bandiera della nazione corrispondente, gestendo il caso in cui non abbiamo la bandiera della nazione ritornata dall’API (le flag non ci sono in FontAwesome).
 
