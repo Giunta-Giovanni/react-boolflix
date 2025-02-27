@@ -1,4 +1,9 @@
 # react-boolflix
+# librerie installate
+- Bootstrap → Libreria di CSS (con componenti JS opzionali) per lo sviluppo di interfacce responsive.
+- FontAwesome → Libreria di icone vettoriali utilizzabili con HTML e CSS.
+- Axios → Libreria JavaScript per effettuare richieste HTTP (alternativa a fetch).
+- React Router DOM → Libreria per la gestione della navigazione in applicazioni React (routing lato client).
 
 <!-- Milestone 0: -->
 Progettare la struttura del global state sulla linea degli esercizi svolti nei giorni precedenti.
