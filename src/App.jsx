@@ -12,6 +12,11 @@ import axios from "axios";
 // salviamo gli endpoint
 const endpointFilm = 'https://api.themoviedb.org/3/search/movie?api_key=81bf1480bc7e4f2e46f185cb4b586229&';
 
+// importiamo i layout
+import DefaultLayout from "./layout/DefaultLayout";
+
+// importiamo le pagine
+import MediaPages from "./pages/MediaPages";
 
 export default function App() {
   // creiamo una variabile di stato che conterrà il nostro array di oggetti con i film ricercati
@@ -48,56 +53,51 @@ export default function App() {
 
   return (
     <>
+      <MediaContext.Provider value={{ film, setFilm }}>
 
-      {/* generiamo il form */}
-      <form
-        onSubmit={handleSubmitForm}
-        className="d-flex"
-        role="search">
-        {/* input di ricerca */}
-        <input
-          className="form-control me-2"
-          type="search"
-          value={search}
-          onChange={handleSearchData}
-          placeholder="Search"
-          aria-label="Search"
-        />
-
-        {/* pulsante di invio del form */}
-        <button className="btn btn-outline-success" type="submit">
-          Search
-        </button>
-      </form>
-
-
-
-      {/* output */}
-      <div>
-        {film.map(film => (
-          <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-2 bk-card">
-            <div>
-              {/* Titolo */}
-              <h2>{film.title}</h2>
-              {/* Titolo Originale */}
-              <h2>{film.original_title}</h2>
-              {/* Lingua */}
-              <p>{film.original_language}</p>
-              {/* Voto */}
-              <p>{film.vote_average}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-
-
+      </MediaContext.Provider>
     </>
   )
 }
 
 
-// 2. generare chiamata api per vederne il funzionamento e il ricavo di tutti i dati.
-// 3. gestire le rotte
-// 4. inviare dati a media gallery
-// 5. gestire output 
+// {/* generiamo il form */ }
+// <form
+//   onSubmit={handleSubmitForm}
+//   className="d-flex"
+//   role="search">
+//   {/* input di ricerca */}
+//   <input
+//     className="form-control me-2"
+//     type="search"
+//     value={search}
+//     onChange={handleSearchData}
+//     placeholder="Search"
+//     aria-label="Search"
+//   />
+
+//   {/* pulsante di invio del form */}
+//   <button className="btn btn-outline-success" type="submit">
+//     Search
+//   </button>
+// </form>
+
+
+
+// {/* output */ }
+// <div>
+//   {film.map(film => (
+//     <div key={film.id} className="col-12 col-sm-6 col-md-4 col-lg-2 bk-card">
+//       <div>
+//         {/* Titolo */}
+//         <h2>{film.title}</h2>
+//         {/* Titolo Originale */}
+//         <h2>{film.original_title}</h2>
+//         {/* Lingua */}
+//         <p>{film.original_language}</p>
+//         {/* Voto */}
+//         <p>{film.vote_average}</p>
+//       </div>
+//     </div>
+//   ))}
+// </div>
