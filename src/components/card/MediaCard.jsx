@@ -3,7 +3,7 @@ import Star from '../../utils/Functions/StarFs';
 
 
 // salviamo la radice del url immagine con
-const urlRadiceimg = 'https://image.tmdb.org/t/p/w154/'
+const urlRadiceimg = 'https://image.tmdb.org/t/p/w342/'
 // "poster_sizes": [
 //   "w92",
 //   "w154",
