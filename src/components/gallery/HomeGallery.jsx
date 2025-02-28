@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react";
-import MediaContext from "../contexts/MediaContext";
+import MediaContext from "../../contexts/MediaContext";
 
-import MediaCard from "./card/MediaCard";
+import MediaCard from "../card/MediaCard";
 
 import axios from "axios";
 const endpointPopularAll = 'https:api.themoviedb.org/3/trending/all/day?api_key=81bf1480bc7e4f2e46f185cb4b586229';

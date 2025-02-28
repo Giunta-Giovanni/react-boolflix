@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import MediaContext from "../contexts/MediaContext";
+import MediaContext from "../../contexts/MediaContext";
 
-import MediaCard from "./card/MediaCard";
+import MediaCard from "../card/MediaCard";
 // import FilmCard from "./card/FilmCard";
 // import SerieCard from "./card/SerieCard";
 

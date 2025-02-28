@@ -1,8 +1,9 @@
 import { useContext, useEffect } from "react";
-import MediaContext from "../contexts/MediaContext";
+import MediaContext from "../../contexts/MediaContext";
 import axios from "axios";
 
-import FilmCard from "./card/FilmCard";
+import FilmCard from "../card/FilmCard";
+
 const endpointPopularfilm = 'https://api.themoviedb.org/3/movie/popular?api_key=81bf1480bc7e4f2e46f185cb4b586229';
 
 export default function FilmGallery() {

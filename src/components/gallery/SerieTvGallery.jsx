@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react";
-import MediaContext from "../contexts/MediaContext";
+import MediaContext from "../../contexts/MediaContext";
 
-import SerieCard from "./card/SerieCard";
+import SerieCard from "../card/SerieCard";
 
 import axios from "axios";
 const endpointPopularSerieTv = 'https://api.themoviedb.org/3/tv/popular?api_key=81bf1480bc7e4f2e46f185cb4b586229';
