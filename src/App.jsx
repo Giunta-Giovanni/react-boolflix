@@ -14,6 +14,7 @@ import DefaultLayout from "./layout/DefaultLayout";
 import MediaPages from "./pages/MediaPages";
 
 export default function App() {
+  const [media, setMedia] = useState([])
   // creiamo una variabile di stato che conterrà il nostro array di oggetti con i film ricercati
   const [film, setFilm] = useState([])
   // creiamo una variabile di stato che conterrà il nostro array di oggetti con le serie tv ricercate
@@ -29,16 +30,25 @@ export default function App() {
       // 2. Se la condizione è vera, stampiamo i film aggiornati nella console
       console.log("Film aggiornati:", film);
       console.log("Serie aggiornate:", series);
+
+      // Aggiorna lo stato 'media' con i nuovi film e serie
+      setMedia([...film, ...series]);
     }
   },
-    //Questo effetto si attiva ogni volta che la variabile 'film' cambia
-    [film, series]
-  );
+    // Questo effetto si attiva ogni volta che 'film', 'series', o 'media' cambiano
+    [film, series]);
+
+  // Nuovo useEffect per loggare il valore aggiornato di 'media'
+  useEffect(() => {
+    if (media.length > 0) {
+      console.log("Media aggiornate:", media);
+    }
+  }, [media]);
 
   return (
     <>
       <MediaContext.Provider value={{
-        film, setFilm, series, setSeries, search, setSearch
+        media, film, setFilm, series, setSeries, search, setSearch
       }}>
         <BrowserRouter>
           <Routes>

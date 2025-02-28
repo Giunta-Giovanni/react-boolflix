@@ -21,12 +21,12 @@ export default function SearchBar() {
         e.preventDefault()
         // resetta i dati dell'oggetto film
         setFilm([])
+        // resetta i dati dell'oggetto serie
+        setSeries([])
+
         console.log("Sto inviando la richiesta per:", search);
         axios.get(`${endpointFilm}&query=${search}`)
             .then(res =>
-                // console.log(res.data.results),
-                // inseriamo la risposta all'interno di film tramite setFilm
-                // setFilm(res.data.results),
                 // uso la risposta api per prendere gli articoli e gli aggiungo i nuovi dati del form 
                 setFilm((currentFilm) => [...currentFilm, ...res.data.results],
                 )
@@ -46,8 +46,8 @@ export default function SearchBar() {
 
         // resettiamo la barra di ricerca 
         setSearch("")
-
     }
+
     return (
         < form
             onSubmit={handleSubmitForm}

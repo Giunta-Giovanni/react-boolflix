@@ -1,7 +1,8 @@
 import Flag from 'react-world-flags';
 
 export default function MediaCard(props) {
-    const { film } = props
+    const { media } = props
+    // console.log('props media', media)
     return (
         <div className="col-12 col-sm-6 col-md-4 col-lg-2 media-card">
             <div className="card-box-image">
@@ -12,13 +13,13 @@ export default function MediaCard(props) {
                 /> */}
                 <div className="card-retro">
                     {/* Titolo */}
-                    <p>{film.title}</p>
+                    <p>{media.title || media.name}</p>
                     {/* Titolo Originale */}
-                    <p>{film.original_title}</p>
+                    <p>{media.original_title || media.original_name}</p>
                     {/* Lingua */}
-                    <Flag className="flag-icon " code={film.original_language} height="16" fallback={<span className='flag-icon'>Unknown</span>} />
+                    <Flag className="flag-icon " code={media.original_language} height="16" fallback={<span className='flag-icon'>Unknown</span>} />
                     {/* Voto */}
-                    <p>{film.vote_average}</p>
+                    <p>{media.vote_average}</p>
                 </div>
             </div>
         </div >
