@@ -19,10 +19,10 @@ export default function App() {
   const [film, setFilm] = useState([])
   // creiamo una variabile di stato che conterrà il nostro array di oggetti con le serie tv ricercate
   const [series, setSeries] = useState([])
-
+  // creiamo una variabile di stato che conterrà lo stato di ricerca 
   const [search, setSearch] = useState("")
 
-  // Log dei film quando viene aggiornato
+  // Log dei film e serie tv & aggiornamento dello stato media
   useEffect(() => {
     // Verifica se la lunghezza dell'array 'film' è maggiore di 0
     // Questo serve per evitare il log quando 'film' è vuoto

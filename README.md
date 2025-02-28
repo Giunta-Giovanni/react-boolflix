@@ -43,7 +43,7 @@ Esempio di URL:
 https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png √
 
 Trasformiamo poi il voto da 1 a 10 decimale in un numero intero da 1 a 5, così da permetterci di stampare a schermo un numero di stelle piene che vanno da 1 a 5, lasciando le restanti vuote (troviamo le icone in FontAwesome).
-Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezze piene (o mezze vuote :P)
+Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezze piene (o mezze vuote :P)√
 
 <!-- Milestone 4: -->
 Trasformiamo quello che abbiamo fatto fino ad ora in una vera e propria webapp, creando un layout completo simil-Netflix:
@@ -69,6 +69,9 @@ Partendo da un film o da una serie, richiedere all'API quali sono gli attori che
 
 <!-- Milestone 6 (Opzionale): -->
 Creare una lista di generi richiedendo quelli disponibili all'API e creare dei filtri con i generi tv e movie per mostrare/nascondere le schede ottenute con la ricerca.
+
+<!-- Milestone 7 (Opzionale): -->
+gestiamo le mezze stelle;
 
 
 
