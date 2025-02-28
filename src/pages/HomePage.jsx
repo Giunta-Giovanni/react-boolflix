@@ -1,7 +1,6 @@
+import HomeGallery from "../components/HomeGallery"
 export default function HomePage() {
     return (
-        <div>
-            questa è la mia HomePage
-        </div>
+        <HomeGallery />
     )
 }

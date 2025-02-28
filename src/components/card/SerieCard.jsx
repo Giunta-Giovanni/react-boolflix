@@ -1,16 +1,17 @@
 import Flag from 'react-world-flags';
 import Star from '../../utils/Functions/StarFs';
+const urlRadiceimg = 'https://image.tmdb.org/t/p/w342/'
 export default function SerieCard(props) {
     const { serie } = props
     return (
-        <div className="col-12 col-sm-6 col-md-4 col-lg-2 media-card">
-            <div className="card-box-image">
-                {/* <img
+        <div className="col-12 col-sm-6 col-md-4 col-lg-2 bk-card">
+            <div className="bk-card-box-image">
+                <img
                     className="bk-card-image"
-                    src={'#'}
-                    alt={film.title}
-                /> */}
-                <div className="card-retro">
+                    src={`${urlRadiceimg}${serie.poster_path}`}
+                    alt={serie.original_name}
+                />
+                <div className="bk-card-retro">
                     {/* Titolo */}
                     <p>{serie.name}</p>
                     {/* Titolo Originale */}

@@ -57,7 +57,7 @@ export default function App() {
   return (
     <>
       <MediaContext.Provider value={{
-        media, film, setFilm, series, setSeries, search, setSearch
+        media, setMedia, film, setFilm, series, setSeries, search, setSearch
       }}>
         <BrowserRouter>
           <Routes>
