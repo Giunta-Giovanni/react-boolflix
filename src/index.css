@@ -31,7 +31,7 @@ header .btn {
 .content-box {
     color: white;
     font-family: "Open Sans";
-    text-align: center;
+    text-align: left;
     padding: 20px 0;
 }
 
@@ -40,21 +40,21 @@ header .btn {
 }
 
 /* Card */
-.box-card {
+.box-bk-card {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.media-card {
+.bk-card {
     margin: 5px;
     position: relative;
     /* debug */
     /* border: 1px solid green; */
 }
 
-.card-box-image {
+.bk-card-box-image {
     width: 100%;
     min-height: 200px;
     position: relative;
@@ -62,41 +62,42 @@ header .btn {
     transition: 1s;
 }
 
-.card-image {
-    /* width: 100%; */
+.bk-card-image {
+    width: 100%;
     position: absolute;
     top: 0px;
     backface-visibility: hidden;
 
 }
 
-.card-retro {
+.bk-card-retro {
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-image: url(./assets/background-card.jpeg);
+    background-size: contain;
+
 }
 
-.card-retro p {
+.bk-card-retro p {
     text-align: center;
 }
 
 
-.card-box-image:hover {
+.bk-card-box-image:hover {
     transform: rotateY(180deg);
     transition: transform 2s;
 }
 
-.card-box-image:hover .card-retro {
+.bk-card-box-image:hover .bk-card-retro {
     display: block;
     opacity: 1;
     transform: rotateY(180deg);
     transition: opacity 1s ease-in-out 0.5s;
-
 }
 
-.card-text {
+.bk-card-text {
     text-align: center;
     font-family: "Open Sans";
     color: white;

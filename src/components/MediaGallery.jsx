@@ -31,7 +31,7 @@ export default function MediaGallery() {
                 </div>  */}
 
                 {/* card dei media */}
-                <div className="box-card">
+                <div className="box-bk-card">
                     {media.map(media => (
                         <MediaCard
                             key={media.id}
@@ -43,3 +43,4 @@ export default function MediaGallery() {
         </section>
     );
 }
+
