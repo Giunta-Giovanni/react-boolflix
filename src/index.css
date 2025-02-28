@@ -6,24 +6,31 @@
 header {
     background-color: black;
     padding: 10px 0;
+    height: 100px;
 
 }
 
 header .logo {
-    color: rgb(229, 9, 20);
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 2px;
-    font-size: 3rem;
-    margin: 0 auto;
+    width: 200px;
+}
+
+header .logo img {
+    width: 100%;
 }
 
 header .row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 header .btn {
     background-color: white;
+}
+
+/* MAIN */
+main {
+    background-color: black;
 }
 
 /* MEDIA GALLERY*/
@@ -77,7 +84,6 @@ header .btn {
     width: 100%;
     background-image: url(./assets/background-card.jpeg);
     background-size: contain;
-
 }
 
 .bk-card-retro p {
@@ -112,7 +118,7 @@ header .btn {
     width: 100%;
 }
 
-
-
-
 /* FOOTER */
+footer {
+    background-color: black;
+}
