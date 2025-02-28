@@ -1,18 +1,8 @@
 import Flag from 'react-world-flags';
 import Star from '../../utils/Functions/StarFs';
-
-
 // salviamo la radice del url immagine con
 const urlRadiceimg = 'https://image.tmdb.org/t/p/w342/'
-// "poster_sizes": [
-//   "w92",
-//   "w154",
-//   "w185",
-//   "w342",
-//   "w500",
-//   "w780",
-//   "original"
-// ],
+
 export default function MediaCard(props) {
     const { media } = props
 

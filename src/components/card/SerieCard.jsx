@@ -1,6 +1,9 @@
 import Flag from 'react-world-flags';
 import Star from '../../utils/Functions/StarFs';
-const urlRadiceimg = 'https://image.tmdb.org/t/p/w342/'
+
+// salviamo la radice del url immagine con
+const urlRadiceimg = 'https://image.tmdb.org/t/p/w342/';
+
 export default function SerieCard(props) {
     const { serie } = props
     return (
