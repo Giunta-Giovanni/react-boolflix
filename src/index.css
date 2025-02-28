@@ -1,4 +1,12 @@
 /* GENERAL */
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
 
 
 /* MEDIA PAGES */
@@ -11,7 +19,7 @@ header {
 }
 
 header .logo {
-    width: 200px;
+    width: 150px;
 }
 
 header .logo img {
@@ -26,6 +34,46 @@ header .row {
 
 header .btn {
     background-color: white;
+}
+
+/* NavBar */
+.box-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+.page-link {
+    margin: auto 10px;
+
+}
+
+.page-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease-in-out;
+}
+
+.page-link:hover::after {
+    width: 100%;
+}
+
+.page-link a {
+    font-size: 1rem;
+}
+
+.page-link .active {
+    color: red;
+
 }
 
 /* MAIN */

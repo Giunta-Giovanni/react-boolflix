@@ -1,5 +1,8 @@
 import SearchBar from "./SearchBar";
 import Logo from "./logo";
+import NavBar from "./NavBar";
+
+import links from "../data/navLink";
 
 export default function Header() {
 
@@ -9,6 +12,9 @@ export default function Header() {
                 <div className="row ">
                     <div className="col-2">
                         <Logo />
+                    </div>
+                    <div className="col box-nav">
+                        <NavBar links={links} />
                     </div>
                     <div className="col-4">
                         <SearchBar />

@@ -11,7 +11,16 @@ import { useState, useEffect } from "react";
 import DefaultLayout from "./layout/DefaultLayout";
 
 // importiamo le pagine
-import MediaPages from "./pages/MediaPages";
+import HomePage from "./pages/HomePage";
+import SerieTvPage from "./pages/SerieTvPage";
+import FilmPage from "./pages/FilmPage";
+import NuoviPopolariPage from "./pages/NuoviPopolariPage";
+import LaMiaListaPage from "./pages/LaMiaListaPage";
+import SfogliaPerLinguaPage from "./pages/SfogliaPerLinguaPage";
+
+import MediaPage from "./pages/MediaPage";
+
+
 
 export default function App() {
   const [media, setMedia] = useState([])
@@ -53,7 +62,12 @@ export default function App() {
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>
-              <Route index element={<MediaPages />} />
+              <Route index element={<HomePage />} />
+              <Route path="/serie-tv" element={<SerieTvPage />} />
+              <Route path="/film" element={<FilmPage />} />
+              <Route path="/nuovi-popolari" element={<NuoviPopolariPage />} />
+              <Route path="/la-mia-lista" element={<LaMiaListaPage />} />
+              <Route path="/sfoglia-lingua" element={<SfogliaPerLinguaPage />} />
             </Route>
           </Routes>
         </BrowserRouter >
