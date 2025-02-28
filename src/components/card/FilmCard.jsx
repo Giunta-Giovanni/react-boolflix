@@ -1,17 +1,19 @@
 import Flag from 'react-world-flags';
 import Star from '../../utils/Functions/StarFs';
+const urlRadiceimg = 'https://image.tmdb.org/t/p/w342/'
+
 
 export default function FilmCard(props) {
     const { film } = props
     return (
-        <div className="col-12 col-sm-6 col-md-4 col-lg-2 media-card">
-            <div className="card-box-image">
-                {/* <img
+        <div className="col-12 col-sm-6 col-md-4 col-lg-2 bk-film-card">
+            <div className="bk-card-box-image">
+                <img
                     className="bk-card-image"
-                    src={'#'}
-                    alt={film.title}
-                /> */}
-                <div className="card-retro">
+                    src={`${urlRadiceimg}${film.poster_path}`}
+                    alt={film.original_title || film.original_name}
+                />
+                <div className="bk-card-retro">
                     {/* Titolo */}
                     <p>{film.title}</p>
                     {/* Titolo Originale */}
