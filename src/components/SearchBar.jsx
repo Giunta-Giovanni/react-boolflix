@@ -1,12 +1,14 @@
 import { useContext } from "react"
 import MediaContext from "../contexts/MediaContext";
 import axios from "axios"
+import lang from "../data/language";
 
-const endpointFilm = 'https://api.themoviedb.org/3/search/movie?api_key=81bf1480bc7e4f2e46f185cb4b586229&';
+const endpointFilm = 'https://api.themoviedb.org/3/search/movie?api_key=81bf1480bc7e4f2e46f185cb4b586229';
+const endpointSeries = 'https://api.themoviedb.org/3/search/tv?api_key=81bf1480bc7e4f2e46f185cb4b586229'
 
 
 export default function SearchBar() {
-    const { setFilm, search, setSearch } = useContext(MediaContext)
+    const { setFilm, setSeries, search, setSearch } = useContext(MediaContext)
     // Creiamo una funzione unica per gestire l'evento onChange dei nostri campi.
 
     function handleSearchData(event) {
@@ -20,7 +22,7 @@ export default function SearchBar() {
         // resetta i dati dell'oggetto film
         setFilm([])
         console.log("Sto inviando la richiesta per:", search);
-        axios.get(`${endpointFilm}query=${search}`)
+        axios.get(`${endpointFilm}&query=${search}`)
             .then(res =>
                 // console.log(res.data.results),
                 // inseriamo la risposta all'interno di film tramite setFilm
@@ -30,7 +32,16 @@ export default function SearchBar() {
                 )
             )
             .catch((error) => {
-                console.error("Errore durante il recupero dei dati:", error);
+                console.error("Errore durante il recupero dei dati dei film:", error);
+            });
+
+        axios.get(`${endpointSeries}&${lang.it}&query=${search}`)
+            .then(res =>
+                setSeries((currentSeries) => [...currentSeries, ...res.data.results],
+                )
+            )
+            .catch((error) => {
+                console.error("Errore durante il recupero dei dati delle serie:", error);
             });
 
         // resettiamo la barra di ricerca 

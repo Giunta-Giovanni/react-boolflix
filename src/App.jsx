@@ -7,11 +7,6 @@ import MediaContext from "./contexts/MediaContext"
 // importiamo gli hooks di react
 import { useState, useEffect } from "react";
 
-// importiamo la libreria di axios
-import axios from "axios";
-// salviamo gli endpoint
-const endpointFilm = 'https://api.themoviedb.org/3/search/movie?api_key=81bf1480bc7e4f2e46f185cb4b586229&';
-
 // importiamo i layout
 import DefaultLayout from "./layout/DefaultLayout";
 
@@ -21,6 +16,8 @@ import MediaPages from "./pages/MediaPages";
 export default function App() {
   // creiamo una variabile di stato che conterrà il nostro array di oggetti con i film ricercati
   const [film, setFilm] = useState([])
+  // creiamo una variabile di stato che conterrà il nostro array di oggetti con le serie tv ricercate
+  const [series, setSeries] = useState([])
 
   const [search, setSearch] = useState("")
 
@@ -28,19 +25,20 @@ export default function App() {
   useEffect(() => {
     // Verifica se la lunghezza dell'array 'film' è maggiore di 0
     // Questo serve per evitare il log quando 'film' è vuoto
-    if (film.length > 0) {
+    if (film.length > 0 && series.length > 0) {
       // 2. Se la condizione è vera, stampiamo i film aggiornati nella console
       console.log("Film aggiornati:", film);
+      console.log("Serie aggiornate:", series);
     }
   },
     //Questo effetto si attiva ogni volta che la variabile 'film' cambia
-    [film]
+    [film, series]
   );
 
   return (
     <>
       <MediaContext.Provider value={{
-        film, setFilm, search, setSearch
+        film, setFilm, series, setSeries, search, setSearch
       }}>
         <BrowserRouter>
           <Routes>
