@@ -1,4 +1,5 @@
 import Flag from 'react-world-flags';
+import Star from '../../utils/Functions/StarFs';
 
 export default function FilmCard(props) {
     const { film } = props
@@ -18,7 +19,9 @@ export default function FilmCard(props) {
                     {/* Lingua */}
                     <Flag className="flag-icon " code={film.original_language} height="16" fallback={<span className='flag-icon'>Unknown</span>} />
                     {/* Voto */}
-                    <p>{film.vote_average}</p>
+                    <div>
+                        {Star(film.vote_average)}
+                    </div>
                 </div>
             </div>
 

@@ -1,5 +1,5 @@
 import Flag from 'react-world-flags';
-
+import Star from '../../utils/Functions/StarFs';
 export default function SerieCard(props) {
     const { serie } = props
     return (
@@ -18,7 +18,9 @@ export default function SerieCard(props) {
                     {/* Lingua */}
                     <Flag className="flag-icon " code={serie.original_language} height="16" fallback={<span className='flag-icon'>Unknown</span>} />
                     {/* Voto */}
-                    <p>{serie.vote_average}</p>
+                    <div>
+                        {Star(serie.vote_average)}
+                    </div>
                 </div>
             </div>
         </div >
