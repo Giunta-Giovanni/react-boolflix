@@ -11,25 +11,6 @@ export default function MediaGallery() {
     return (
         <section className="content-box">
             <div className="container">
-                {/* card dei film
-                <div className="box-card">
-                    {film.map(film => (
-                        <FilmCard
-                            key={film.id}
-                            film={film}
-                        />
-                    ))}
-                </div>
-                {/* card delle serie */}
-                {/* <div className="box-card">
-                    {series.map(serie => (
-                        <SerieCard
-                            key={serie.id}
-                            serie={serie}
-                        />
-                    ))}
-                </div>  */}
-
                 {/* card dei media */}
                 <div className="box-bk-card">
                     {media.map(media => (
