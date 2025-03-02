@@ -1,3 +1,9 @@
+import BoxLink from "./BoxLinks";
+import categorylinks from "../data/categorylinks";
+
+const { categorylinks1, categorylinks2, categorylinks3, categorylinks4 } = categorylinks
+console.log(categorylinks1)
+
 export default function Footer() {
     return (
         <footer>
@@ -9,25 +15,25 @@ export default function Footer() {
                     <ul className="channel">
                         <li className="single-channel">
                             <a href="#">
-                                <i class="fa-brands fa-facebook-f"></i>
+                                <i className="fa-brands fa-facebook-f"></i>
                             </a>
 
                         </li>
                         <li className="single-channel">
                             <a href="">
-                                <i class="fa-brands fa-instagram"></i>
+                                <i className="fa-brands fa-instagram"></i>
                             </a>
 
                         </li>
                         <li className="single-channel">
                             <a href="">
-                                <i class="fa-brands fa-x-twitter"></i>
+                                <i className="fa-brands fa-x-twitter"></i>
                             </a>
 
                         </li>
                         <li className="single-channel">
                             <a href="">
-                                <i class="fa-brands fa-youtube"></i>
+                                <i className="fa-brands fa-youtube"></i>
                             </a>
 
                         </li>
@@ -36,6 +42,20 @@ export default function Footer() {
                 </div>
 
                 {/* member footer links */}
+                <div className="box-link d-flex">
+                    <div className="link-col">
+                        <BoxLink linkCategory={categorylinks1} />
+                    </div>
+                    <div className="link-col">
+                        <BoxLink linkCategory={categorylinks2} />
+                    </div>
+                    <div className="link-col">
+                        <BoxLink linkCategory={categorylinks3} />
+                    </div>
+                    <div className="link-col">
+                        <BoxLink linkCategory={categorylinks4} />
+                    </div>
+                </div>
 
 
 

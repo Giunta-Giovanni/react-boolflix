@@ -176,6 +176,8 @@ footer {
     padding: 50px 0;
 }
 
+/* channel side */
+
 .box-channel {
     padding: 20px 0;
 }
@@ -187,4 +189,21 @@ footer {
 .single-channel {
     margin-right: 25px;
     font-size: 1.3rem;
+}
+
+/* link side */
+.netlink {
+    font-size: 0.9rem;
+    padding: 0px 50px 10px 0px;
+}
+
+.netlinka {
+    color: #5a5a5a;
+}
+
+.netlink:hover .netlinka {
+    color: #bdbdbd;
+    text-decoration: underline;
+    text-decoration-color: #bdbdbd;
+    text-underline-offset: 4px;
 }
