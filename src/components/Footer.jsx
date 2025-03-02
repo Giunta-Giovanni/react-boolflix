@@ -10,9 +10,9 @@ export default function Footer() {
             < div className="container" >
 
                 {/* social link */}
-                <div className="box-channel">
+                <div className="social-links">
 
-                    <ul className="channel">
+                    <ul className="channel p-0">
                         <li className="single-channel">
                             <a href="#">
                                 <i className="fa-brands fa-facebook-f"></i>
@@ -42,7 +42,7 @@ export default function Footer() {
                 </div>
 
                 {/* member footer links */}
-                <div className="box-link d-flex">
+                <div className="member-footer-links">
                     <div className="link-col">
                         <BoxLink linkCategory={categorylinks1} />
                     </div>
@@ -60,12 +60,18 @@ export default function Footer() {
 
 
                 {/* member footer service */}
+                <div className="member-footer-service">
+                    <button className="service-code"> Codice di servizio</button>
+                </div>
 
                 {/* member footer copyright */}
+                <div className="member-footer-copyright">
+                    <span>© 1997-2025 Boolflix, Inc.</span>
+                </div>
 
 
             </div >
-        </footer>
+        </footer >
 
     )
 }

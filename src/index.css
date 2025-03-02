@@ -178,7 +178,7 @@ footer {
 
 /* channel side */
 
-.box-channel {
+.social-links {
     padding: 20px 0;
 }
 
@@ -192,6 +192,10 @@ footer {
 }
 
 /* link side */
+.member-footer-links {
+    display: flex;
+}
+
 .netlink {
     font-size: 0.9rem;
     padding: 0px 50px 10px 0px;
@@ -206,4 +210,26 @@ footer {
     text-decoration: underline;
     text-decoration-color: #bdbdbd;
     text-underline-offset: 4px;
+}
+
+/* member-footer-service */
+.service-code {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    padding: .5em;
+    border: 1px solid grey;
+    background: transparent;
+    color: grey;
+    cursor: pointer;
+}
+
+.service-code:hover {
+    color: rgb(213, 213, 213);
+}
+
+/* member-footer-service */
+.member-footer-copyright {
+    color: #5a5a5a;
+    font-size: 0.7rem;
+
 }
