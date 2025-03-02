@@ -3,17 +3,23 @@ import axios from "axios";
 // importiamo gli hook di react
 import { useState, useEffect } from "react";
 // importiamo gli hook di react router dom
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, useNavigate } from "react-router-dom"
+
 
 
 export default function SingleCard() {
     const [singleMedia, setSingleMedia] = useState([])
+    const [cast, setCast] = useState([])
+    const navigate = useNavigate();
+
     // let realeaseData = '';
     const { id } = useParams();
     const key = 'api_key=81bf1480bc7e4f2e46f185cb4b586229'
     const endpointFindSerie = `https://api.themoviedb.org/3/tv/${id}?${key}`
     const endpointFindmovie = `https://api.themoviedb.org/3/movie/${id}?${key}`
+    const endpointFindmoviecredits = `https://api.themoviedb.org/3/movie/${id}/credits?${key}`
 
+    // chiamata dati singolo media
     function fetchData() {
         axios.get(endpointFindSerie)
             .then(res => {
@@ -46,20 +52,31 @@ export default function SingleCard() {
             });
     }
 
+    // chiamata dati crediti media
+    function fetchcredits() {
+        axios.get(endpointFindmoviecredits)
+            .then(res => {
+                const actor = res.data.cast.slice(0, 5).map(actor => actor.name);
+                setCast(actor)
+            }
+            )
+    }
+
     useEffect(() => {
-        fetchData();
+        fetchData(), fetchcredits();
     }, []);
 
-    console.log(singleMedia)
+    console.log(cast)
 
     return (
         <div className="container">
             <div className="single-card-box">
                 {/* sezione foto */}
                 <img src={`https://image.tmdb.org/t/p/original/${singleMedia.backdrop_path}`} alt="" />
-                <Link to={'/serie-tv'}>
-                    <i className="fa-solid fa-circle-arrow-left return"></i>
-                </Link>
+                <i
+                    className="fa-solid fa-circle-arrow-left return"
+                    onClick={() => navigate(-1)}
+                ></i>
 
 
                 <div className="row my-4">
@@ -83,7 +100,7 @@ export default function SingleCard() {
 
                     </div>
                     <div className="col-4">
-                        <p className="info-serie"><span>Cast: </span>{singleMedia.creatori}</p>
+                        <p className="info-serie"><span>Cast: </span>{singleMedia.creatori || cast.join(',')}</p>
                         <p className="info-serie"><span>Generi: </span>{singleMedia.generi}</p>
                         <p className="info-serie"><span>Caratteristiche: </span>{singleMedia.type}</p>
                     </div>

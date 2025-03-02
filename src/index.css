@@ -263,6 +263,7 @@ footer {
 
 .single-card-box .return:hover {
     opacity: 1;
+    cursor: pointer;
 }
 
 .single-card-box h5 {
