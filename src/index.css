@@ -1,3 +1,7 @@
+:root {
+    background-color: #141414;
+}
+
 /* GENERAL */
 li {
     list-style: none;
@@ -12,7 +16,7 @@ li a {
 /* MEDIA PAGES */
 /* HEADER */
 header {
-    background-color: black;
+    background-color: #141414;
     padding: 10px 0;
     height: 100px;
 
@@ -78,7 +82,7 @@ nav ul {
 
 /* MAIN */
 main {
-    background-color: black;
+    background-color: #141414;
 }
 
 /* MEDIA GALLERY*/
@@ -168,5 +172,19 @@ main {
 
 /* FOOTER */
 footer {
-    background-color: black;
+    background-color: #141414;
+    padding: 50px 0;
+}
+
+.box-channel {
+    padding: 20px 0;
+}
+
+.channel {
+    display: flex;
+}
+
+.single-channel {
+    margin-right: 25px;
+    font-size: 1.3rem;
 }
