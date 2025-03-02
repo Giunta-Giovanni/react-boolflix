@@ -17,6 +17,7 @@ import FilmPage from "./pages/FilmPage";
 import NuoviPopolariPage from "./pages/NuoviPopolariPage";
 import LaMiaListaPage from "./pages/LaMiaListaPage";
 import SfogliaPerLinguaPage from "./pages/SfogliaPerLinguaPage";
+import DetailPage from "./pages/DetailPage";
 
 import MediaPage from "./pages/MediaPage";
 
@@ -62,8 +63,14 @@ export default function App() {
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>
-              <Route index element={<HomePage />} />
-              <Route path="/serie-tv" element={<SerieTvPage />} />
+              <Route path="/">
+                <Route index element={<HomePage />} />
+                <Route path="/:id" element={<DetailPage />} />
+              </Route>
+              <Route path="/serie-tv">
+                <Route index element={<SerieTvPage />} />
+                <Route path="/serie-tv:id" element={<DetailPage />} />
+              </Route>
               <Route path="/film" element={<FilmPage />} />
               <Route path="/nuovi-popolari" element={<NuoviPopolariPage />} />
               <Route path="/la-mia-lista" element={<LaMiaListaPage />} />
@@ -72,7 +79,7 @@ export default function App() {
           </Routes>
         </BrowserRouter >
 
-      </MediaContext.Provider>
+      </MediaContext.Provider >
     </>
   )
 }

@@ -1,7 +1,7 @@
-import SingleCardTv from "../components/card/SingleCardTv"
+import SingleCard from "../components/card/SingleCard"
 export default function DetailPage() {
 
     return (
-        <SingleCardTv />
+        <SingleCard />
     )
 }
